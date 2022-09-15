@@ -1,5 +1,6 @@
 // Welcome to my script js 
 
+// display id 
 const display = document.getElementById("display");
 const question = document.getElementById("question");
 const startBtn = document.getElementById("start");
@@ -7,13 +8,13 @@ const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
-// variables here
+// variables starting here
 let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
 
-// Load and display question here
+// Here Loading and displaying question
 fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
@@ -21,17 +22,17 @@ fetch("./texts.json")
     question.innerHTML = questionText;
   });
 
-// checks the user typed character and displays accordingly
+// check the user typed character and displays
 const typeController = (e) => {
   const newLetter = e.key;
 
-  // Handle backspace press
+  // Handling backspace press buttons
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
 
-  // these are the valid character we are allowing to type here
+  // these are the valid character  that's why we allowing to type here
   const validLetters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
 
@@ -140,4 +141,4 @@ setInterval(() => {
   document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
 
-// Thank you so much 
+// Thank you so much programming hero teams
