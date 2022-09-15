@@ -1,3 +1,5 @@
+// Welcome to my script js 
+
 const display = document.getElementById("display");
 const question = document.getElementById("question");
 const startBtn = document.getElementById("start");
@@ -5,13 +7,13 @@ const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
-// variables
+// variables here
 let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
 
-// Load and display question
+// Load and display question here
 fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
@@ -29,7 +31,7 @@ const typeController = (e) => {
     return display.removeChild(display.lastChild);
   }
 
-  // these are the valid character we are allowing to type
+  // these are the valid character we are allowing to type here
   const validLetters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
 
@@ -62,7 +64,7 @@ const validate = (key) => {
   return false;
 };
 
-// FINISHED TYPING
+// Finished time here
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
   // the current time is the finish time
@@ -70,15 +72,15 @@ const gameOver = () => {
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
 
-  // show result modal
+  // showing the result modal here
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
   modalBackground.classList.toggle("hidden");
-  // clear user text
+  // clear user text here
   display.innerHTML = "";
-  // make it inactive
+  // make it inactive here
   display.classList.add("inactive");
-  // show result
+  // show result here
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
@@ -88,7 +90,7 @@ const gameOver = () => {
 
   addHistory(questionText, timeTaken, errorCount);
 
-  // restart everything
+  // restart everything here
   startTime = null;
   errorCount = 0;
   userText = "";
@@ -101,7 +103,7 @@ const closeModal = () => {
 };
 
 const start = () => {
-  // If already started, do not start again
+  // If already started, do not start again. okay
   if (startTime) return;
 
   let count = 3;
@@ -110,9 +112,9 @@ const start = () => {
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
-    // finished timer
+    // finished timer here
     if (count === 0) {
-      // -------------- START TYPING -----------------
+      // -------------- Start typing here-----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
@@ -124,12 +126,12 @@ const start = () => {
   }, 1000);
 };
 
-// START Countdown
+// Starting Countdown here 
 startBtn.addEventListener("click", start);
-// If history exists, show it
+// If history exists, then it would be show 
 displayHistory();
 
-// Show typing time spent
+// Showing typing time spent here
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
@@ -137,3 +139,5 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
+
+// Thank you so much 
