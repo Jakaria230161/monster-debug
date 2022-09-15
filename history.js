@@ -1,3 +1,4 @@
+// Welcome to history js 
 const histories = document.getElementById("histories");
 
 function addHistory(questionText, timeTaken, errorCount) {
@@ -38,3 +39,5 @@ function displayHistory() {
     histories.appendChild(newRow);
   });
 }
+
+// Thank you 
