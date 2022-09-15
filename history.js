@@ -1,6 +1,7 @@
 // Welcome to history js 
 const histories = document.getElementById("histories");
 
+// history function 
 function addHistory(questionText, timeTaken, errorCount) {
   const newRow = document.createElement("div");
   newRow.classList.add("card");
@@ -22,6 +23,7 @@ function addHistory(questionText, timeTaken, errorCount) {
   displayHistory();
 }
 
+// display history function 
 function displayHistory() {
   histories.innerHTML = "";
   const previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
