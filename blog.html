@@ -65,38 +65,17 @@
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is the differences between VAR VS LET VS CONST?
+                            What is the differences between Local Storage and Session Storage?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>VAR : </strong>
-                            <p>1 . var is the keyword that tells JavaScript you're declaring a variable</p>
-                            <p>2 . var is function scoped.</p>
-                            <p>3 . var allows to redeclare variables.</p>
-                            <p>4 . Hoisting occurs in var.</p>
-                            <p>5 .var is an ECMAScript1 feature.</p>
-                        </div>
-                        <div class="accordion-body">
-                            <strong>LET : </strong>
-                            <p>1 .let is block-scoped..</p>
-                            <p>2 . let does not allow to redeclare variables.</p>
-                            <p>3 . Hoisting does not occur in let..</p>
-                            <p>4 .We cannot declare a variable more than once if we defined that previously in the same
-                                scope.
-                            </p>
-                            <p>5 . let is a feature of ES6.</p>
-                        </div>
-                        <div class="accordion-body">
-                            <strong>CONST : </strong>
-                            <p>1 . TThe scope of a const variable is block scope.</p>
-                            <p>2 . It cannot be updated or re-declared into the scope.</p>
-                            <p>3 . It cannot be declared without initialization.</p>
-                            <p>4 . It cannot be accessed without initialization, as it cannot be declared without
-                                initialization.</p>
-                            <p>5 . It cannot be accessed without initialization, as it cannot be declared without
-                                initialization.</p>
+                            <strong>Local Storage VS Session Storage: </strong>
+                            <p>localStorage and sessionStorage are almost identical and have the same API. The difference is that with sessionStorage,
+                            the data is persisted only until the window or tab is closed. With localStorage, the data is persisted until the user
+                            manually clears the browser cache or until your web app clears the data. This tutorial features localStorage, but the
+                            syntax for sessionStorage is the same.</p>
                         </div>
                     </div>
                 </div>
@@ -104,48 +83,23 @@
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Can you explain differences between Arrow and Regular Functions?
+                            Can you explain differences between Global scope and Block scope?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>Regular Functions VS Regular Functions : </strong>
-                            <p> .1) Syntax:
-                                A programmer can get the same result as regular functions by writing a few lines of code
-                                using arrow functions.
+                            <strong>Global Scope VS Block Scope : </strong>
+                            <br>
 
-                                Curly brackets are not required if only one expression is present.</p>
-                            <p>2) Arguments binding
-                                arguments object inside the regular functions contains the list of arguments.The arrow
-                                function, on the opposite, doesn’t define arguments i.e. they do not have arguments
-                                binding.But you can easily access the arrow function arguments using a rest parameter
-                                ...args.</p>
-                            <p>3) Use of this keyword
-                                Inside of a regular JavaScript function, this value is dynamic. The dynamic context
-                                means that the value of this depends
-                                on how the function is invoked.The behavior of this inside of an arrow, function differs
-                                considerably from the regular function’s this behavior as an
-                                arrow function does not have its own “this” keyword.The value of this inside an arrow
-                                function remains the same throughout the lifecycle of the function and is always bound
-                                to the value of this in the closest non-arrow parent function which means No matter how
-                                or where being executed, this
-                                value inside of an arrow function always equals this value from the outer function.
-                            </p>
-                            <p>4) Using a new keyword
-                                Regular functions are constructible and callable. They can be called using the new
-                                keyword.But, the arrow functions are only callable and not constructible, i.e., arrow
-                                functions can never be used as constructor
-                                functions</p>
-                        </div>
-                        <div class="accordion-body">
-                            <strong>Summary : </strong>
-                            <p>Summary
-                                this value inside a regular function is dynamic and depends on how the function is
-                                invoked. But this inside the arrow
-                                function is bound lexically and equals to this of the outer function. Fat arrow methods
-                                always bind this a value to the
-                                class instance.
+                            <strong>Global Scope : </strong>
+                            <p>The variables defined outside of any function or curly brackets are known as global variables and have global scope.
+                            Global scope means that the variables can be accessed from any part of that program, any function or conditional state
+                            can access that variable.</p>
+                                <strong>Block Scope :</strong>
+                            <p>Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the
+                            curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only
+                            allowed to refer to these variables from within the curly brackets {}.</p>
                         </div>
                     </div>
                 </div>
@@ -153,60 +107,38 @@
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What is differences between map, filter, forEach, find?
+                            How work event loop?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>1. The returning value
-                                The first difference between map() and forEach() is the returning value. The forEach()
-                                method returns undefined and
-                                map() returns a new array with the transformed elements. Even if they do the same job,
-                                the returning value remains
-                                different.</p>
-                            <p>2. Ability to chain other methods
-                                The second difference between these array methods is the fact that map() is chainable.
-                                This means that you can attach
-                                reduce(), sort(), filter() and so on after performing a map() method on an array.
+                            <p>Event loop: An event loop is something that pulls stuff out of the queue and places it onto the function execution stack
+                            whenever the function stack becomes empty.</p>
 
-                                That's something you can't do with forEach() because, as you might guess, it returns
-                                undefined.</p>
-                            <p>3. Mutability
-                                In general, the word "mutate" means change, alternate, modify or transform. And in the
-                                JavaScript world it has the same
-                                meaning.
+                            <p>The event loop is the secret by which JavaScript gives us an illusion of being multithreaded even though it is
+                            single-threaded.</p>
 
-                                A mutable object is an object whose state can be modified after it is created. So, what
-                                about forEach and map regarding
-                                mutability?
+                            <p>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the
+                            Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such
+                            an iteration is called a tick in the Event Loop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How to get undefined?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>We learned that a numerical expression is undefined when there is no answer or when you get division by zero. We might
+                            get division by zero for those numerical expressions with variables and a denominator. To find the points where the
+                            numerical expression is undefined, we set the denominator equal to zero and solve</p>
 
-                                Well, according to the MDN documentation:
-
-                                forEach() does not mutate the array on which it is called. (However, callback may do
-                                so).
-
-                                map() does not mutate the array on which it is called (although callback, if invoked,
-                                may do so).
-
-                                JavaScript is weird.Well, in my opinion, this definition is not clear though. And to
-                                know which does not mutate the original array, we first
-                                have to check how these two methods work.
-
-                                The map() method returns an entirely new array with transformed elements and the same
-                                amount of data. In the case of
-                                forEach(), even if it returns undefined, it will mutate the original array with the
-                                callback.
-
-                                Therefore, we see clearly that map() relies on immutability and forEach() is a mutator
-                                method.</p>
-                            <p>4. Performance Speed
-                                Regarding performance speed, they are a little bit different. But, does it matter? Well,
-                                it depends on various things
-                                like your computer, the amount of data you're dealing with, and so on.
-
-                                You can check it out on your own with this example below or with jsPerf to see which is
-                                faster.</p>
                         </div>
                     </div>
                 </div>
