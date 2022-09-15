@@ -1,153 +1,241 @@
+<!-- DOCTYPE HTML staring from here   -->
 <!doctype html>
 <html lang="en">
 
+    <!-- head tag  -->
+
     <head>
+        <!-- required meta tag  -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- website's blog title -->
         <title>Blog</title>
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
-        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- google font link -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Bootstrap cdn link  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+        <!-- favicon added here  -->
+        <link rel="shortcut icon" href="question answer favicon blog.png" type="image/x-icon">
     </head>
+    <!-- head end here  -->
+
+    <!-- body starting here  -->
 
     <body>
-        <section>
-            <p class="text-2xl mt-8 text-center font-medium text-white">4 Questions & Answer in JavaScript</p>
-        </section>
-        <section class="p-3 m-3">
-            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
-                <div class="collapse-title text-xl font-medium text-white">
-                    Difference Between Local Storage and Session Storage?
+        <!-- header section starting from here  -->
+        <header class="">
+            <!-- navBar starting from here -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container">
+                    <a class="navbar-brand me-5" href="index.html">
+                        <img src="image/newsMania.png" height="70px" alt="News Mania" loading="lazy"
+                            style="margin-top: -1px;" />
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="blog.html" class="nav-item nav-link active">Blog</a>
+                            <a class="d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+                                role="button" aria-expanded="false">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
+                                    height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="collapse-content text-white">
-                    <p class="text-xl">Local Storage: <small>This read-only interface property provides
-                            access to the
-                            Document’s local
-                            storage object, the stored data is stored across browser sessions. Similar to
-                            sessionStorage,
-                            except that localStorage data gets cleared when the page session ends – that is when the
-                            page is
-                            closed. It is cleared when the last “private” tab of a browser is closed (localStorage data
-                            for
-                            a document loaded in a private browsing or incognito session).</small></p>
-                    <p>Local storage has 4 methods:</p>
-                    <p>1. setItem() Method – <small>This method takes two parameters one is key and another one is
-                            value. It
-                            is
-                            used to store the value in a particular location with the name of the
-                            key.</small> localStorage.setItem(key, value)</p>
+            </nav>
+            <!-- navBar ending here -->
 
-                    <p>2. getItem() Method – <small>This method takes one parameter that is key which is used to get the
-                            value
-                            stored with a particular key name.</small> localStorage.getItem(key)</p>
+            <!-- this is horizontal line  -->
+            <hr>
+        </header>
+        <!-- header section ending here  -->
 
-                    <p>3. removeItem() Method – <small>This is method is used to remove the value stored in the memory
-                            in
-                            reference to key.</small> localStorage.removeItem(key)</p>
+        <!-- main section start from here  -->
+        <main class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is the differences between VAR VS LET VS CONST?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>VAR : </strong>
+                            <p>1 . var is the keyword that tells JavaScript you're declaring a variable</p>
+                            <p>2 . var is function scoped.</p>
+                            <p>3 . var allows to redeclare variables.</p>
+                            <p>4 . Hoisting occurs in var.</p>
+                            <p>5 .var is an ECMAScript1 feature.</p>
+                        </div>
+                        <div class="accordion-body">
+                            <strong>LET : </strong>
+                            <p>1 .let is block-scoped..</p>
+                            <p>2 . let does not allow to redeclare variables.</p>
+                            <p>3 . Hoisting does not occur in let..</p>
+                            <p>4 .We cannot declare a variable more than once if we defined that previously in the same
+                                scope.
+                            </p>
+                            <p>5 . let is a feature of ES6.</p>
+                        </div>
+                        <div class="accordion-body">
+                            <strong>CONST : </strong>
+                            <p>1 . TThe scope of a const variable is block scope.</p>
+                            <p>2 . It cannot be updated or re-declared into the scope.</p>
+                            <p>3 . It cannot be declared without initialization.</p>
+                            <p>4 . It cannot be accessed without initialization, as it cannot be declared without
+                                initialization.</p>
+                            <p>5 . It cannot be accessed without initialization, as it cannot be declared without
+                                initialization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Can you explain differences between Arrow and Regular Functions?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Regular Functions VS Regular Functions : </strong>
+                            <p> .1) Syntax:
+                                A programmer can get the same result as regular functions by writing a few lines of code
+                                using arrow functions.
 
-                    <p>4. clear() Method – <small>This method is used to clear all the values stored in
-                            localstorage.</small>
-                        localStorage.clear()</p>
+                                Curly brackets are not required if only one expression is present.</p>
+                            <p>2) Arguments binding
+                                arguments object inside the regular functions contains the list of arguments.The arrow
+                                function, on the opposite, doesn’t define arguments i.e. they do not have arguments
+                                binding.But you can easily access the arrow function arguments using a rest parameter
+                                ...args.</p>
+                            <p>3) Use of this keyword
+                                Inside of a regular JavaScript function, this value is dynamic. The dynamic context
+                                means that the value of this depends
+                                on how the function is invoked.The behavior of this inside of an arrow, function differs
+                                considerably from the regular function’s this behavior as an
+                                arrow function does not have its own “this” keyword.The value of this inside an arrow
+                                function remains the same throughout the lifecycle of the function and is always bound
+                                to the value of this in the closest non-arrow parent function which means No matter how
+                                or where being executed, this
+                                value inside of an arrow function always equals this value from the outer function.
+                            </p>
+                            <p>4) Using a new keyword
+                                Regular functions are constructible and callable. They can be called using the new
+                                keyword.But, the arrow functions are only callable and not constructible, i.e., arrow
+                                functions can never be used as constructor
+                                functions</p>
+                        </div>
+                        <div class="accordion-body">
+                            <strong>Summary : </strong>
+                            <p>Summary
+                                this value inside a regular function is dynamic and depends on how the function is
+                                invoked. But this inside the arrow
+                                function is bound lexically and equals to this of the outer function. Fat arrow methods
+                                always bind this a value to the
+                                class instance.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What is differences between map, filter, forEach, find?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>1. The returning value
+                                The first difference between map() and forEach() is the returning value. The forEach()
+                                method returns undefined and
+                                map() returns a new array with the transformed elements. Even if they do the same job,
+                                the returning value remains
+                                different.</p>
+                            <p>2. Ability to chain other methods
+                                The second difference between these array methods is the fact that map() is chainable.
+                                This means that you can attach
+                                reduce(), sort(), filter() and so on after performing a map() method on an array.
 
-                    <p class="text-xl mt-5">Session Storage: <small>Session Storage objects can be accessed using the
-                            sessionStorage read-only
-                            property. The difference between sessionStorage and localStorage is that localStorage data
-                            does
-                            not expire, whereas sessionStorage data is cleared when the page session ends.</small></p>
-                    <p>Session Storage has 4 methods:</p>
-                    <p>1. setItem() Method – <small>This method takes two parameters one is key and another one is
-                            value. It
-                            is used to store the value in a particular location with the name of the key.</small>
-                        sessionStorage.setItem(key, value)</p>
+                                That's something you can't do with forEach() because, as you might guess, it returns
+                                undefined.</p>
+                            <p>3. Mutability
+                                In general, the word "mutate" means change, alternate, modify or transform. And in the
+                                JavaScript world it has the same
+                                meaning.
 
-                    <p>2. getItem() Method – <small>This method takes one parameter that is key which is used to get the
-                            value stored with a particular key name.</small> sessionStorage.getItem(key)</p>
+                                A mutable object is an object whose state can be modified after it is created. So, what
+                                about forEach and map regarding
+                                mutability?
 
-                    <p>3. removeItem() Method – <small>This is method is used to remove the value stored in the memory
-                            in
-                            reference to key.</small> sessionStorage.removeItem(key)</p>
+                                Well, according to the MDN documentation:
 
-                    <p>4. clear() Method – <small>This method is used to clear all the values stored in the session
-                            storage</small>
-                        sessionStorage.clear()</p>
+                                forEach() does not mutate the array on which it is called. (However, callback may do
+                                so).
 
+                                map() does not mutate the array on which it is called (although callback, if invoked,
+                                may do so).
+
+                                JavaScript is weird.Well, in my opinion, this definition is not clear though. And to
+                                know which does not mutate the original array, we first
+                                have to check how these two methods work.
+
+                                The map() method returns an entirely new array with transformed elements and the same
+                                amount of data. In the case of
+                                forEach(), even if it returns undefined, it will mutate the original array with the
+                                callback.
+
+                                Therefore, we see clearly that map() relies on immutability and forEach() is a mutator
+                                method.</p>
+                            <p>4. Performance Speed
+                                Regarding performance speed, they are a little bit different. But, does it matter? Well,
+                                it depends on various things
+                                like your computer, the amount of data you're dealing with, and so on.
+
+                                You can check it out on your own with this example below or with jsPerf to see which is
+                                faster.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </main>
+        <!-- main section ending here  -->
 
-            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
-                <div class="collapse-title text-xl font-medium text-white">
-                    Difference Between Global scope and Block scope?
-                </div>
-                <div class="collapse-content text-white">
-                    <p class="text-xl">Global Scope</p>
-                    <p>The variables defined outside of any function or curly brackets are known as global variables and
-                        have global scope. Global scope means that the variables can be accessed from any part of that
-                        program, any function or conditional state can access that variable.</p>
-                    <img src="images/global-scope.png" class="h-80 w-3/4	" alt="">
-
-                    <p class="text-xl">Block Scope</p>
-                    <p>Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the
-                        variables inside the curly brackets {}. Now, these curly brackets can be of loops, or
-                        conditional
-                        statements, or something else. You are only allowed to refer to these variables from within the
-                        curly brackets {}.</p>
-                    <img src="images/block-scope.png" class="h-80 w-3/4	" alt="">
-
+        <!-- footer section start here  -->
+        <footer>
+            <div class="card">
+                <div class="card-body text-center fw-bold fs-3">
+                    &copy;All content reserved by <span class="text-primary">NEWS MANIA</span> 2022.
                 </div>
             </div>
+        </footer>
+        <!-- footer section end here  -->
 
-            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
-                <div class="collapse-title text-xl font-medium text-white">
-                    How does the Event Loop works in JavaScript?
-                </div>
-                <div class="collapse-content text-white">
-                    <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all
-                        operations
-                        on a single thread, but using a few smart data structures, it gives us the illusion of
-                        multi-threading. Let’s take a look at what happens on the back-end.</p>
-                    <p>The call stack is responsible for keeping track of all the operations in line to be executed.
-                        Whenever a function is finished, it is popped from the stack.</p>
-
-                    <p>The event queue is responsible for sending new functions to the stack for processing. It follows
-                        the
-                        queue data structure to maintain the correct sequence in which all operations should be sent for
-                        execution.</p>
-                    <p>An example of this is the setTimeout method. When a setTimeout operation is processed in the
-                        stack,
-                        it is sent to the corresponding API which waits till the specified time to send this operation
-                        back
-                        in for processing.</p>
-                    <p>The event loop facilitates this process; it constantly checks whether or not the call stack is
-                        empty.
-                        If it is empty, new functions are added from the event queue. If it is not, then the current
-                        function call is processed.</p>
-
-                </div>
-            </div>
-
-            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
-                <div class="collapse-title text-xl font-medium text-white">
-                    How to use undefined in JavaScript?
-                </div>
-                <div class="collapse-content text-white">
-                    <p class="text-xl">Example1: variable declared but not defined</p>
-                    <p>var x;
-                    <p>console.log(typeof(x));</p>
-
-                    <p class="text-xl">Example2: type of an empty string</p>
-                    <p>var x = "";
-                    <p>console.log(x);</p>
-                    <p>console.log(typeof(x));</p>
-
-                    <p class="text-xl">Example3: check if a variable is defined or not</p>
-                    <p>In this example program, we will check whether a specific variable is defined or not. If the
-                        program
-                        does not define the variable, display the message “variable not defined!”. Else show the message
-                        “variable defined”:</p>
-
-                </div>
-            </div>
-
-        </section>
+        <!-- Bootstrap min.js  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
     </body>
+    <!-- body ending here  -->
 
 </html>
+<!-- HTML ending here  -->
+
+<!-- Thank you so much programming here  -->
