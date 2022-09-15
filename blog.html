@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blog</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <section>
+            <p class="text-2xl mt-8 text-center font-medium text-white">4 Questions & Answer in JavaScript</p>
+        </section>
+        <section class="p-3 m-3">
+            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
+                <div class="collapse-title text-xl font-medium text-white">
+                    Difference Between Local Storage and Session Storage?
+                </div>
+                <div class="collapse-content text-white">
+                    <p class="text-xl">Local Storage: <small>This read-only interface property provides
+                            access to the
+                            Document’s local
+                            storage object, the stored data is stored across browser sessions. Similar to
+                            sessionStorage,
+                            except that localStorage data gets cleared when the page session ends – that is when the
+                            page is
+                            closed. It is cleared when the last “private” tab of a browser is closed (localStorage data
+                            for
+                            a document loaded in a private browsing or incognito session).</small></p>
+                    <p>Local storage has 4 methods:</p>
+                    <p>1. setItem() Method – <small>This method takes two parameters one is key and another one is
+                            value. It
+                            is
+                            used to store the value in a particular location with the name of the
+                            key.</small> localStorage.setItem(key, value)</p>
+
+                    <p>2. getItem() Method – <small>This method takes one parameter that is key which is used to get the
+                            value
+                            stored with a particular key name.</small> localStorage.getItem(key)</p>
+
+                    <p>3. removeItem() Method – <small>This is method is used to remove the value stored in the memory
+                            in
+                            reference to key.</small> localStorage.removeItem(key)</p>
+
+                    <p>4. clear() Method – <small>This method is used to clear all the values stored in
+                            localstorage.</small>
+                        localStorage.clear()</p>
+
+                    <p class="text-xl mt-5">Session Storage: <small>Session Storage objects can be accessed using the
+                            sessionStorage read-only
+                            property. The difference between sessionStorage and localStorage is that localStorage data
+                            does
+                            not expire, whereas sessionStorage data is cleared when the page session ends.</small></p>
+                    <p>Session Storage has 4 methods:</p>
+                    <p>1. setItem() Method – <small>This method takes two parameters one is key and another one is
+                            value. It
+                            is used to store the value in a particular location with the name of the key.</small>
+                        sessionStorage.setItem(key, value)</p>
+
+                    <p>2. getItem() Method – <small>This method takes one parameter that is key which is used to get the
+                            value stored with a particular key name.</small> sessionStorage.getItem(key)</p>
+
+                    <p>3. removeItem() Method – <small>This is method is used to remove the value stored in the memory
+                            in
+                            reference to key.</small> sessionStorage.removeItem(key)</p>
+
+                    <p>4. clear() Method – <small>This method is used to clear all the values stored in the session
+                            storage</small>
+                        sessionStorage.clear()</p>
+
+                </div>
+            </div>
+
+            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
+                <div class="collapse-title text-xl font-medium text-white">
+                    Difference Between Global scope and Block scope?
+                </div>
+                <div class="collapse-content text-white">
+                    <p class="text-xl">Global Scope</p>
+                    <p>The variables defined outside of any function or curly brackets are known as global variables and
+                        have global scope. Global scope means that the variables can be accessed from any part of that
+                        program, any function or conditional state can access that variable.</p>
+                    <img src="images/global-scope.png" class="h-80 w-3/4	" alt="">
+
+                    <p class="text-xl">Block Scope</p>
+                    <p>Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the
+                        variables inside the curly brackets {}. Now, these curly brackets can be of loops, or
+                        conditional
+                        statements, or something else. You are only allowed to refer to these variables from within the
+                        curly brackets {}.</p>
+                    <img src="images/block-scope.png" class="h-80 w-3/4	" alt="">
+
+                </div>
+            </div>
+
+            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
+                <div class="collapse-title text-xl font-medium text-white">
+                    How does the Event Loop works in JavaScript?
+                </div>
+                <div class="collapse-content text-white">
+                    <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all
+                        operations
+                        on a single thread, but using a few smart data structures, it gives us the illusion of
+                        multi-threading. Let’s take a look at what happens on the back-end.</p>
+                    <p>The call stack is responsible for keeping track of all the operations in line to be executed.
+                        Whenever a function is finished, it is popped from the stack.</p>
+
+                    <p>The event queue is responsible for sending new functions to the stack for processing. It follows
+                        the
+                        queue data structure to maintain the correct sequence in which all operations should be sent for
+                        execution.</p>
+                    <p>An example of this is the setTimeout method. When a setTimeout operation is processed in the
+                        stack,
+                        it is sent to the corresponding API which waits till the specified time to send this operation
+                        back
+                        in for processing.</p>
+                    <p>The event loop facilitates this process; it constantly checks whether or not the call stack is
+                        empty.
+                        If it is empty, new functions are added from the event queue. If it is not, then the current
+                        function call is processed.</p>
+
+                </div>
+            </div>
+
+            <div tabindex="0" class="collapse collapse-plus border border-yellow-300 bg-base-100 rounded-box ">
+                <div class="collapse-title text-xl font-medium text-white">
+                    How to use undefined in JavaScript?
+                </div>
+                <div class="collapse-content text-white">
+                    <p class="text-xl">Example1: variable declared but not defined</p>
+                    <p>var x;
+                    <p>console.log(typeof(x));</p>
+
+                    <p class="text-xl">Example2: type of an empty string</p>
+                    <p>var x = "";
+                    <p>console.log(x);</p>
+                    <p>console.log(typeof(x));</p>
+
+                    <p class="text-xl">Example3: check if a variable is defined or not</p>
+                    <p>In this example program, we will check whether a specific variable is defined or not. If the
+                        program
+                        does not define the variable, display the message “variable not defined!”. Else show the message
+                        “variable defined”:</p>
+
+                </div>
+            </div>
+
+        </section>
+    </body>
+
+</html>
